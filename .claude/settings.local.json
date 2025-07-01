@@ -14,7 +14,9 @@
       "Bash(mv:*)",
       "Bash(git add:*)",
       "Bash(mkdir:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(tsc:*)",
+      "Bash(docker build:*)"
     ],
     "deny": []
   }

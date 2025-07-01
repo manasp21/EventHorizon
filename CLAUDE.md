@@ -1,0 +1,1 @@
+- never commit yourself, ever ever ever

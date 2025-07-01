@@ -1,9 +1,16 @@
 # Smithery configuration file: https://smithery.ai/docs/build/deployments
 
-runtime: "typescript"
+runtime: "container"
+
+build:
+  dockerfile: "Dockerfile"
+  dockerBuildPath: "."
 
 startCommand:
-  type: "stdio"
+  type: "http"
+  port: 8000
+  command: "node"
+  args: ["dist/http_server.js"]
   configSchema:
     type: "object"
     properties:
