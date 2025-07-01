@@ -485,7 +485,7 @@ Use this tool to track progress and understand the current state of the evolutio
     }
 };
 const server = new Server({
-    name: "evolutionary-solver-server",
+    name: "event-horizon-server",
     version: "1.0.0",
 }, {
     capabilities: {
@@ -521,7 +521,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function runServer() {
     const transport = new StdioServerTransport();
     await server.connect(transport);
-    console.error("Evolutionary Solver MCP Server running on stdio");
+    console.error("Event Horizon MCP Server running on stdio");
 }
 runServer().catch((error) => {
     console.error("Fatal error running server:", error);
