@@ -9,7 +9,10 @@
       "Bash(rm:*)",
       "Bash(tsc --noEmit)",
       "Bash(tsc)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "WebFetch(domain:smithery.ai)",
+      "Bash(mv:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

@@ -1,0 +1,48 @@
+# Smithery configuration file: https://smithery.ai/docs/build/deployments
+
+runtime: "typescript"
+
+startCommand:
+  type: "stdio"
+  configSchema:
+    type: "object"
+    properties:
+      disableLogging:
+        type: "boolean"
+        description: "Disable evolution progress logging (set to true to reduce console output)"
+        default: false
+      populationSize:
+        type: "integer"
+        description: "Default population size for evolutionary generations"
+        minimum: 1
+        maximum: 10
+        default: 3
+      maxGenerations:
+        type: "integer"  
+        description: "Default maximum number of generations"
+        minimum: 1
+        maximum: 20
+        default: 5
+      convergenceThreshold:
+        type: "number"
+        description: "Default convergence threshold (0.0 to 1.0)"
+        minimum: 0
+        maximum: 1
+        default: 0.95
+    additionalProperties: false
+    description: "Optional configuration for Event Horizon evolutionary algorithm defaults"
+
+# Server metadata
+name: "Event Horizon"
+description: "Evolutionary solution generation using genetic algorithms and consistency checks"
+version: "1.0.0"
+author: "themanaspandey"
+license: "MIT"
+
+# Tags for discovery
+tags:
+  - "evolutionary-algorithm"
+  - "genetic-algorithm"
+  - "optimization"
+  - "solution-generation"
+  - "problem-solving"

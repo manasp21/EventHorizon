@@ -1,11 +1,26 @@
 {
-  "name": "@modelcontextprotocol/server-event-horizon",
+  "name": "mcp-server-event-horizon",
   "version": "1.0.0",
-  "description": "MCP server for Event Horizon evolutionary solution generation",
+  "description": "MCP server for Event Horizon evolutionary solution generation using genetic algorithms",
   "license": "MIT",
   "author": "themanaspandey",
-  "homepage": "https://themanaspandey.com",
-  "bugs": "https://github.com/modelcontextprotocol/servers/issues",
+  "homepage": "https://github.com/manasp21/EventHorizon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manasp21/EventHorizon.git"
+  },
+  "bugs": "https://github.com/manasp21/EventHorizon/issues",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "evolutionary-algorithm",
+    "genetic-algorithm",
+    "solution-generation",
+    "optimization",
+    "smithery",
+    "claude",
+    "ai-tools"
+  ],
   "type": "module",
   "bin": {
     "mcp-server-event-horizon": "dist/index.js"

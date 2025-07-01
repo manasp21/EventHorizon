@@ -1,5 +1,9 @@
 # Event Horizon MCP Server
 
+[![Smithery](https://img.shields.io/badge/Smithery-Available-blue?style=flat&logo=smithery)](https://smithery.ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+
 An MCP server implementation that provides evolutionary solution generation and optimization capabilities for LLMs. Event Horizon enables LLMs to evolve solutions across multiple generations using consistency check evaluations and genetic algorithm principles.
 
 ## Features
@@ -64,42 +68,69 @@ Get the current status of the evolutionary system including progress, statistics
 
 ## Installation
 
-### NPX (Recommended)
+### Smithery (Recommended)
+
+Install directly from the Smithery registry for the easiest setup:
 
 ```bash
-npx @modelcontextprotocol/server-event-horizon
+npx @smithery/cli install event-horizon --client claude
 ```
 
-### Clone and Build
+This automatically configures the server for Claude Desktop. You can also customize the installation:
 
 ```bash
-git clone <repository-url>
-cd event-horizon-mcp
-npm install
-npm run build
+npx @smithery/cli install event-horizon --client claude --config '{"disableLogging": true, "populationSize": 5}'
 ```
 
-## Configuration
+### Manual Installation
 
-### Claude Desktop
-
-Add this to your `claude_desktop_config.json`:
+If you prefer manual installation, add this to your `claude_desktop_config.json`:
 
 ```json
 {
   "mcpServers": {
     "event-horizon": {
-      "command": "npx",
+      "command": "node",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-event-horizon"
+        "/path/to/EventHorizon/dist/index.js"
       ]
     }
   }
 }
 ```
 
+### Clone and Build
+
+For development or customization:
+
+```bash
+git clone https://github.com/manasp21/EventHorizon.git
+cd EventHorizon
+npm install
+npm run build
+```
+
+## Advanced Configuration
+
+### Configuration Options
+
+The Event Horizon server supports several configuration options:
+
+- `disableLogging` (boolean): Disable evolution progress logging (default: false)
+- `populationSize` (integer): Default population size for generations (default: 3)
+- `maxGenerations` (integer): Default maximum generations (default: 5)
+- `convergenceThreshold` (number): Default convergence threshold (default: 0.95)
+
 ### Docker
+
+Build and run with Docker:
+
+```bash
+docker build -t event-horizon-mcp .
+docker run --rm -i event-horizon-mcp
+```
+
+Or use in Claude Desktop config:
 
 ```json
 {
@@ -110,52 +141,16 @@ Add this to your `claude_desktop_config.json`:
         "run",
         "--rm",
         "-i",
-        "mcp/event-horizon"
+        "event-horizon-mcp"
       ]
     }
   }
 }
 ```
 
-### VS Code
+### VS Code & Other MCP Clients
 
-For VS Code integration, add to your User Settings (JSON) or `.vscode/mcp.json`:
-
-**NPX Installation:**
-```json
-{
-  "mcp": {
-    "servers": {
-      "event-horizon": {
-        "command": "npx",
-        "args": [
-          "-y",
-          "@modelcontextprotocol/server-event-horizon"
-        ]
-      }
-    }
-  }
-}
-```
-
-**Docker Installation:**
-```json
-{
-  "mcp": {
-    "servers": {
-      "event-horizon": {
-        "command": "docker",
-        "args": [
-          "run",
-          "--rm",
-          "-i",
-          "mcp/event-horizon"
-        ]
-      }
-    }
-  }
-}
-```
+For other MCP clients, you can use Smithery CLI or manual configuration. Check the [Smithery documentation](https://smithery.ai/docs) for client-specific instructions.
 
 ## Usage Example
 
