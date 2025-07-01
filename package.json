@@ -22,11 +22,14 @@
     "ai-tools"
   ],
   "type": "module",
+  "module": "./src/index.ts",
+  "main": "dist/index.js",
   "bin": {
     "mcp-server-event-horizon": "dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build": "tsc && shx chmod +x dist/*.js",

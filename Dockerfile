@@ -10,7 +10,7 @@ COPY tsconfig.json ./
 RUN npm ci --ignore-scripts
 
 # Copy source code
-COPY index.ts ./
+COPY src/ ./src/
 COPY README.md ./
 
 # Build the project

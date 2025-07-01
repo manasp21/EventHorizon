@@ -12,7 +12,9 @@
       "Bash(timeout:*)",
       "WebFetch(domain:smithery.ai)",
       "Bash(mv:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(mkdir:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
