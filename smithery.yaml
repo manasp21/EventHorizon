@@ -9,28 +9,10 @@ startCommand:
     properties:
       disableLogging:
         type: "boolean"
-        description: "Disable evolution progress logging (set to true to reduce console output)"
+        description: "Disable evolution progress logging"
         default: false
-      populationSize:
-        type: "integer"
-        description: "Default population size for evolutionary generations"
-        minimum: 1
-        maximum: 10
-        default: 3
-      maxGenerations:
-        type: "integer"  
-        description: "Default maximum number of generations"
-        minimum: 1
-        maximum: 20
-        default: 5
-      convergenceThreshold:
-        type: "number"
-        description: "Default convergence threshold (0.0 to 1.0)"
-        minimum: 0
-        maximum: 1
-        default: 0.95
-    additionalProperties: false
-    description: "Optional configuration for Event Horizon evolutionary algorithm defaults"
+    additionalProperties: true
+    required: []
 
 # Server metadata
 name: "Event Horizon"
