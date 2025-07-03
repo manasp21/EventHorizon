@@ -110,7 +110,7 @@ test_*.json
 # MCP specific
 mcp-server-*.tgz
 
-# LaTeX and document files
+# LaTeX compilation artifacts
 *.aux
 *.bbl
 *.blg
@@ -122,6 +122,6 @@ mcp-server-*.tgz
 *.nav
 *.snm
 *.vrb
+
+# Specific document files to ignore
 bose_hubbard_solution.*
-*.tex
-*.pdf
