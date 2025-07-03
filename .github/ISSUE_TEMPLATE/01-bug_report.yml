@@ -1,0 +1,186 @@
+name: Bug Report
+description: File a bug report for Event Horizon MCP Server
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - manasp21
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible to help us diagnose and fix the issue.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting your bug report
+      options:
+        - label: I have searched the existing issues to make sure this bug hasn't been reported already
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/manasp21/EventHorizon/blob/main/CONTRIBUTING.md)
+          required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment Method
+      description: How are you running Event Horizon MCP Server?
+      options:
+        - Claude Desktop (local stdio)
+        - Smithery (cloud HTTP)
+        - VS Code MCP extension
+        - Manual local setup
+        - Docker container
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-tool
+    attributes:
+      label: Affected Tool
+      description: Which evolutionary algorithm tool is experiencing the issue?
+      options:
+        - start_evolution
+        - add_solution
+        - score_solution
+        - evolve_generation
+        - get_evolution_status
+        - Multiple tools
+        - Server startup/connection
+        - Other (please specify)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Event Horizon Version
+      description: What version of Event Horizon are you running?
+      placeholder: "e.g., 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      description: What version of Node.js are you using?
+      placeholder: "e.g., 18.17.0"
+    validations:
+      required: true
+
+  - type: input
+    id: mcp-client
+    attributes:
+      label: MCP Client
+      description: What MCP client are you using?
+      placeholder: "e.g., Claude Desktop 1.2.3, VS Code MCP extension 0.1.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe what happened and what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the issue
+      placeholder: |
+        1. Start evolution with problem statement "..."
+        2. Add solution with content "..."
+        3. Score solution with checkId "..." and score 0.8
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: Describe the expected outcome
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened instead
+      placeholder: Describe what actually occurred, include error messages if any
+    validations:
+      required: true
+
+  - type: textarea
+    id: evolutionary-context
+    attributes:
+      label: Evolutionary Algorithm Context
+      description: Provide context about your evolutionary algorithm usage
+      placeholder: |
+        - Population size: 5
+        - Max generations: 8
+        - Number of consistency checks: 3
+        - Problem domain: algorithm optimization
+        - Convergence threshold: 0.95
+    validations:
+      required: false
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages and Logs
+      description: Include any error messages, stack traces, or relevant log output
+      placeholder: Paste error messages here (use code blocks with triple backticks)
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration
+      description: Share your MCP client configuration (remove any sensitive data)
+      placeholder: |
+        ```json
+        {
+          "mcpServers": {
+            "event-horizon": {
+              "command": "node",
+              "args": ["path/to/dist/index.js"]
+            }
+          }
+        }
+        ```
+      render: json
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Operating system, browser version, networking setup, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: severity
+    attributes:
+      label: Impact Assessment
+      description: Help us understand the severity of this bug
+      options:
+        - label: This bug blocks critical functionality
+        - label: This bug affects evolutionary algorithm correctness
+        - label: This bug causes data loss or corruption
+        - label: This bug affects performance significantly
+        - label: This bug is cosmetic or minor

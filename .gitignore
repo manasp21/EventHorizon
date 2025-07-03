@@ -109,3 +109,19 @@ test_*.json
 
 # MCP specific
 mcp-server-*.tgz
+
+# LaTeX and document files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.nav
+*.snm
+*.vrb
+bose_hubbard_solution.*
+*.tex
+*.pdf

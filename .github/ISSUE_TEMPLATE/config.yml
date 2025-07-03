@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Event Horizon Documentation
+    url: https://github.com/manasp21/EventHorizon/blob/main/README.md
+    about: Read the comprehensive documentation for Event Horizon MCP Server
+  - name: MCP Protocol Documentation
+    url: https://modelcontextprotocol.io/
+    about: Learn about the Model Context Protocol specification and best practices
+  - name: Smithery Registry
+    url: https://smithery.ai/server/event-horizon
+    about: View Event Horizon on the Smithery MCP server registry
+  - name: Contributing Guidelines
+    url: https://github.com/manasp21/EventHorizon/blob/main/CONTRIBUTING.md
+    about: Learn how to contribute to the Event Horizon project
+  - name: Security Policy
+    url: https://github.com/manasp21/EventHorizon/blob/main/SECURITY.md
+    about: Report security vulnerabilities responsibly

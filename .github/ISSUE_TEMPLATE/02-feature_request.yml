@@ -1,0 +1,194 @@
+name: Feature Request
+description: Suggest an idea or enhancement for Event Horizon MCP Server
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - manasp21
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to Event Horizon! Your ideas help make the evolutionary algorithm system better for everyone.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting your feature request
+      options:
+        - label: I have searched existing issues and discussions to make sure this feature hasn't been requested already
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/manasp21/EventHorizon/blob/main/CONTRIBUTING.md)
+          required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: What type of feature are you requesting?
+      options:
+        - New MCP Tool
+        - Evolutionary Algorithm Enhancement
+        - Performance Improvement
+        - User Interface/Experience
+        - Documentation
+        - Integration/Deployment
+        - Configuration/Customization
+        - Monitoring/Analytics
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to you?
+      options:
+        - Critical (blocking current work)
+        - High (would significantly improve workflow)
+        - Medium (nice to have)
+        - Low (minor enhancement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What's the current limitation or pain point?
+      placeholder: |
+        Describe the problem you're trying to solve or the limitation you've encountered.
+        For example: "When working with large populations (100+ solutions), the current scoring system becomes too slow..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see implemented
+      placeholder: |
+        Provide a clear and detailed description of what you want to happen.
+        For example: "Add a parallel scoring system that can evaluate multiple solutions simultaneously..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case Description
+      description: Describe how you would use this feature in practice
+      placeholder: |
+        Provide a concrete example of how this feature would be used:
+        1. Start evolution with problem "optimize neural network architecture"
+        2. Generate 50 solution candidates
+        3. Use new parallel scoring to evaluate all solutions in 2 minutes instead of 20 minutes
+        4. Continue evolution with faster iteration cycles
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evolutionary-component
+    attributes:
+      label: Evolutionary Algorithm Component
+      description: Which part of the evolutionary algorithm would this feature affect?
+      options:
+        - Population initialization
+        - Solution generation
+        - Fitness evaluation/scoring
+        - Selection mechanisms
+        - Crossover operations
+        - Mutation strategies
+        - Convergence detection
+        - Progress tracking
+        - Result analysis
+        - Not applicable
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternative-solutions
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative approaches or workarounds?
+      placeholder: |
+        Describe any alternative solutions or features you've considered.
+        If you've found workarounds, please share them here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical details, constraints, or implementation thoughts?
+      placeholder: |
+        Share any technical insights, such as:
+        - Specific algorithms or approaches
+        - Performance requirements
+        - Integration challenges
+        - API design considerations
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples-references
+    attributes:
+      label: Examples and References
+      description: Any examples, research papers, or references that might help?
+      placeholder: |
+        Include links to:
+        - Similar implementations in other tools
+        - Research papers or articles
+        - Code examples or pseudocode
+        - Screenshots or mockups
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: implementation-scope
+    attributes:
+      label: Implementation Scope
+      description: What scope of implementation would satisfy your needs?
+      options:
+        - label: Basic implementation that covers the core functionality
+        - label: Advanced implementation with configuration options
+        - label: Full-featured implementation with comprehensive options
+        - label: Integration with existing tools and workflows
+
+  - type: checkboxes
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Would you be okay with breaking changes if necessary?
+      options:
+        - label: This feature is worth introducing breaking changes
+        - label: Please maintain backward compatibility
+        - label: I'm not sure about breaking changes
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples about the feature request
+      placeholder: |
+        Include any additional information such as:
+        - Screenshots or diagrams
+        - Performance benchmarks
+        - Real-world examples
+        - Timeline considerations
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution-interest
+    attributes:
+      label: Contribution Interest
+      description: Are you interested in helping implement this feature?
+      options:
+        - label: I would like to implement this feature myself
+        - label: I can provide testing and feedback
+        - label: I can help with documentation
+        - label: I can provide domain expertise
+        - label: I prefer someone else implements this
